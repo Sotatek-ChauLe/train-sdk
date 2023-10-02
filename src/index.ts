@@ -6,8 +6,8 @@ export interface BlocklensType<SecurityDataType extends unknown>
   apiKey: string;
 }
 
-export default class Blocklens<
-  SecurityDataType extends unknown
+export class Blocklens<
+  SecurityDataType extends unknown,
 > extends HttpClient<SecurityDataType> {
   constructor(
     { apiKey, ...axiosConfig }: BlocklensType<SecurityDataType> = { apiKey: "" }
